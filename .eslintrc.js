@@ -1,5 +1,10 @@
 module.exports = {
-  extends: ["eslint:recommended", "airbnb", "prettier"],
+  extends: [
+    "plugin:@next/next/recommended",
+    // "eslint:recommended",
+    "airbnb",
+    "prettier",
+  ],
   rules: {
     "react/jsx-props-no-spreading": [1, { custom: "ignore" }],
     "react/jsx-filename-extension": [
@@ -21,13 +26,13 @@ module.exports = {
       },
     ],
   },
-  settings: {
-    "import/resolver": {
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
-      },
-    },
-  },
+  // settings: {
+  //   "import/resolver": {
+  //     node: {
+  //       extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
+  //     },
+  //   },
+  // },
   env: {
     browser: true,
     node: true,
